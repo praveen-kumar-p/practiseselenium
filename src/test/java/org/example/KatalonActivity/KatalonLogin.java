@@ -19,8 +19,5 @@ public class KatalonLogin {
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/");
 
         driver.quit();
-
     }
-
-
 }
