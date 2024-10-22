@@ -43,10 +43,10 @@ public class accignment {
         List<WebElement> searchprice = chromeDriver.findElements(By.xpath("//span[@class='s-item__price']"));
 
         int size = Math.min(searchtitle.size(), searchprice.size()); //61
-        for(int i = 0; i<= size ; i++ ){
-        }
+        for(int i = 0; i<= size ; i++ ) {
             System.out.println("Title: " + searchtitle.get(i).getText() + " || " + "Price: " + searchprice.get(i).getText());
             System.out.println();
+        }
 
             chromeDriver.quit();
     }
