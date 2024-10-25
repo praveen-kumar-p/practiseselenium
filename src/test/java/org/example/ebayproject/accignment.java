@@ -48,6 +48,6 @@ public class accignment {
             System.out.println();
         }
 
-            chromeDriver.quit();
+        chromeDriver.quit();
     }
 }
