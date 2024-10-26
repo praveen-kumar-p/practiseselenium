@@ -1,6 +1,7 @@
 package org.example.ebayproject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 public class accignment {
@@ -32,6 +34,8 @@ public class accignment {
         chromeDriver.findElement(By.xpath("//input[@id='gh-ac']")).sendKeys("macmini");
         chromeDriver.findElement(By.id("gh-btn")).click();
 
+//        WebElement error = chromeDriver.findElement(By.id(""));
+//        WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(3000));
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

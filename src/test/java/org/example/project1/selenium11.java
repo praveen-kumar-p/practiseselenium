@@ -19,6 +19,7 @@ public class selenium11 {
         WebDriver webDriver = new ChromeDriver(chromeOptions);
         webDriver.get("https://app.vwo.com");
 
+
 //        driver.manage().window().maximize();
 //        driver.manage().window().minimize();
         Assert.assertEquals(webDriver.getTitle(), "Login - VWO");
