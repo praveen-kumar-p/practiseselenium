@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.time.Duration;
+
 public class petrosoft {
 
     @Test
@@ -351,6 +353,62 @@ public class petrosoft {
 //        chromeDriver.findElement(By.id("btnSubmit")).click();
 //        Alert alert = chromeDriver.switchTo().alert();
 //        alert.accept();
+
+//        WebElement menu = chromeDriver.findElement(By.xpath("//a[contains(text(),'Pump Setting')]"));
+//        ((JavascriptExecutor) chromeDriver).executeScript("arguments[0].scrollIntoView(true);", menu);
+//        menu.click();
+        // Add New Pump
+//        chromeDriver.findElement(By.cssSelector("span[class='add_new_pump']")).click();
+//        chromeDriver.findElement(By.id("pump_name")).sendKeys("Soft Pump");
+//        chromeDriver.findElement(By.id("btnSubmit")).click();
+//        Alert alert = chromeDriver.switchTo().alert();
+//        alert.accept();
+
+        // Add Pump Settings -- Not completed yet
+//        WebElement pump = chromeDriver.findElement(By.id("pump_name1"));
+//        Select select = new Select(pump);
+//        select.selectByValue("P1");
+//
+//        WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(5));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tank_no1")));
+//        WebElement tank = chromeDriver.findElement(By.id("tank_no1"));
+//        Select select1 = new Select(tank);
+//        select1.selectByVisibleText(" TANK-1 ");
+//
+//        chromeDriver.findElement(By.id("noz1-ts-dropdown")).click();
+//        chromeDriver.findElement(By.id("noz1-opt-3")).click();
+
+        // Master-->Duty Pay Shift
+//        WebElement menu = chromeDriver.findElement(By.xpath("//a[contains(text(),'DutyPay Shift')]"));
+//        ((JavascriptExecutor) chromeDriver).executeScript("arguments[0].scrollIntoView(true);", menu);
+//        menu.click();
+//
+//        WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(3));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("shift_type"))).sendKeys("12 HRS NIGHT");
+//        chromeDriver.findElement(By.id("duties")).sendKeys("1");
+//        chromeDriver.findElement(By.id("anytime-time")).click();
+//        chromeDriver.findElement(By.xpath("(//li[contains(text(),'20')])[1]")).click();
+//        chromeDriver.findElement(By.xpath("(//li[contains(text(),'0')])[14]")).click();
+//        chromeDriver.findElement(By.xpath("(//li[contains(text(),'0')])[15]")).click();
+//
+//        WebDriverWait wait1 = new WebDriverWait(chromeDriver, Duration.ofSeconds(3));
+//        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.name("to_time"))).click();
+//        chromeDriver.findElement(By.xpath("(//li[contains(text(),'08')])[2]")).click();
+//        chromeDriver.findElement(By.xpath("(//li[contains(text(),'0')])[28]")).click();
+//        chromeDriver.findElement(By.xpath("(//li[contains(text(),'0')])[29]")).click();
+//        chromeDriver.findElement(By.id("btnSubmit")).click();
+//        Alert alert = chromeDriver.switchTo().alert();
+//        alert.accept();
+
+        // Master-->Print Bill
+        WebElement menu = chromeDriver.findElement(By.xpath("//a[contains(text(),'Print Templates')]"));
+        ((JavascriptExecutor) chromeDriver).executeScript("arguments[0].scrollIntoView(true);", menu);
+        menu.click();
+        WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='radio_2']"))).click();
+
+        WebDriverWait wait1 = new WebDriverWait(chromeDriver, Duration.ofSeconds(3));
+        wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='radio_4']"))).click();
 
         try {
             Thread.sleep(3000);
