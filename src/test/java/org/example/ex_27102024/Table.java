@@ -27,8 +27,6 @@ public class Table {
         System.out.println(row);
         System.out.println(column);
 
-        // //table[@id='customers']/tbody/tr[5]/td[2]
-
         String first = "//table[@id='customers']/tbody/tr[";
         String second = "]/td[";
         String third = "]";
