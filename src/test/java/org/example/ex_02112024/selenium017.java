@@ -26,6 +26,7 @@ public class selenium017 {
 
         driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click();
 
+//        WebElement fromCity = driver.findElement(By.id("fromCity"));
         WebElement fromCity = driver.findElement(By.id("fromCity"));
 
         try {
