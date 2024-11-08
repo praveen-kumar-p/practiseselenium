@@ -2,6 +2,7 @@ package org.example.ex_02112024;
 
 
 import io.qameta.allure.Description;
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +35,12 @@ public class selenium22_Relative_Locators {
 
         WebElement profession = driver.findElement(By.xpath("(//span[contains(text(),Profession)])[4]"));
         driver.findElement(with(By.id("profession-1")).toRightOf(profession)).click();
+        Thread.sleep(5000);
 
+        WebElement Autotool = driver.findElement(By.xpath("//span[normalize-space()='Automation Tools']"));
+        driver.findElement(with(By.id("tool-1")).toRightOf(Autotool)).click();
+        Thread.sleep(3000);
+        driver.findElement(with(By.id("profession-0")).above(Autotool)).click();
         Thread.sleep(5000);
 
         driver.quit();

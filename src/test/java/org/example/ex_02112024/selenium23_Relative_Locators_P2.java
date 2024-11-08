@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 public class selenium23_Relative_Locators_P2 {
@@ -31,7 +33,14 @@ public class selenium23_Relative_Locators_P2 {
         WebElement city = driver.findElement(By.id("search_city"));
         city.sendKeys("India" + Keys.ENTER);
 
-        Thread.sleep(5000);
+        Thread.sleep(8000);
+        List<WebElement> list_of_elements = driver.findElements(By.xpath("(//table[@id='example']/tbody/tr/td)[14]"));
+
+        for (WebElement l : list_of_elements){
+            System.out.println(l.getText());
+        }
+
+        Thread.sleep(8000);
 
         driver.quit();
 

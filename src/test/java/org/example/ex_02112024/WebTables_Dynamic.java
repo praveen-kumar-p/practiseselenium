@@ -26,7 +26,6 @@ public class WebTables_Dynamic {
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://awesomeqa.com/webtable1.html");
 
-        // //table[@summary='Sample Table']/tbody
         WebElement table = driver.findElement(By.xpath("//table[@summary='Sample Table']/tbody"));
         List<WebElement> row_tables = table.findElements(By.tagName("tr"));
         for (int i = 0; i < row_tables.size(); i++) {
