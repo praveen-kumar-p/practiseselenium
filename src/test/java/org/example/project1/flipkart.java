@@ -35,7 +35,6 @@ public class flipkart {
         driver.findElement(By.xpath("(//div[@class='KzDlHZ'])[1]")).click();
         Thread.sleep(3000);
 
-
         driver.quit();
     }
 }
