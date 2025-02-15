@@ -20,8 +20,6 @@ public class Alert_selenium {
         // //button[text()='Click for JS Alert']
         // //button[@onclick='jsAlert()']
 
-//        WebElement element = driver.findElement(By.cssSelector("button[onclick='jsAlert()']"));
-//        WebElement elementConfirm = driver.findElement(By.xpath("//button[@onclick=\"jsConfirm()\"]"));
         WebElement elementPrompt= driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
 
 //        element.click();
